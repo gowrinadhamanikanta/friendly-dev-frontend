@@ -29,7 +29,7 @@ export async function loader ({request}:Route.LoaderArgs):
         title: item.title,
         description: item.description,
         url: item.url,
-        image: item.image?.url ? `${import.meta.env.VITE_STRAPI_URL}${item.image.url}`:'/images/no-image.png',
+        image: item.image?.url ? `${item.image.url}`:'/images/no-image.png',
         date: item.date,
         category: item.category,
         featured: item.featured,
@@ -39,7 +39,7 @@ export async function loader ({request}:Route.LoaderArgs):
         title: item.title,
         slug: item.slug,
         excerpt: item.excerpt,
-        image: item.image?.url ? `${import.meta.env.VITE_STRAPI_URL}${item.image.url}`:'/images/no-image.png',
+        image: item.image?.url ? `${item.image.url}`:'/images/no-image.png',
         date: item.date,
         body:item.body,
         
